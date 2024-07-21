@@ -14,32 +14,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayPopularGames(games) {
         const popularGamesList = document.getElementById('popular-games-list');
-        popularGamesList.innerHTML = ''; // Clear existing content
-        games.forEach((game, index) => {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="#">${index + 1}. <img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
-            popularGamesList.appendChild(li);
-        });
+        if (popularGamesList) {
+            popularGamesList.innerHTML = ''; // Clear existing content
+            games.forEach((game, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#">${index + 1}. <img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
+                popularGamesList.appendChild(li);
+            });
+        } else {
+            console.error('Popular games list element not found');
+        }
     }
 
     function displayTopRatedGames(games) {
         const topRatedGamesList = document.getElementById('top-rated-games-list');
-        topRatedGamesList.innerHTML = ''; // Clear existing content
-        games.forEach(game => {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
-            topRatedGamesList.appendChild(li);
-        });
+        if (topRatedGamesList) {
+            topRatedGamesList.innerHTML = ''; // Clear existing content
+            games.forEach(game => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
+                topRatedGamesList.appendChild(li);
+            });
+        } else {
+            console.error('Top rated games list element not found');
+        }
     }
 
     function displayLatestGames(games) {
         const latestGamesList = document.getElementById('latest-games-list');
-        latestGamesList.innerHTML = ''; // Clear existing content
-        games.forEach(game => {
-            const li = document.createElement('li');
-            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a> <span class="game-date">${game.date}</span>`;
-            latestGamesList.appendChild(li);
-        });
+        if (latestGamesList) {
+            latestGamesList.innerHTML = ''; // Clear existing content
+            games.forEach(game => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a> <span class="game-date">${game.date}</span>`;
+                latestGamesList.appendChild(li);
+            });
+        } else {
+            console.error('Latest games list element not found');
+        }
     }
 
     // Call displayLatestGames in the fetch callback
@@ -71,17 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display games in a section
     function displayGames(games, sectionId, isFeatured = false) {
         const section = document.getElementById(sectionId);
-        section.innerHTML = '';
-        games.forEach(game => {
-            const gameElement = document.createElement('div');
-            gameElement.classList.add(isFeatured ? 'featured-game-card' : 'game');
-            gameElement.innerHTML = `
-                <h3>${game.title}</h3>
-                <img src="${game.image_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
-                ${isFeatured ? `<p>${game.description}</p>` : ''}
-            `;
-            section.appendChild(gameElement);
-        });
+        if (section) {
+            section.innerHTML = '';
+            games.forEach(game => {
+                const gameElement = document.createElement('div');
+                gameElement.classList.add(isFeatured ? 'featured-game-card' : 'game');
+                gameElement.innerHTML = `
+                    <h3>${game.title}</h3>
+                    <img src="${game.image_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
+                    ${isFeatured ? `<p>${game.description}</p>` : ''}
+                `;
+                section.appendChild(gameElement);
+            });
+        } else {
+            console.error(`Section with id "${sectionId}" not found`);
+        }
     }
 
     function displayFeaturedGames(games) {
@@ -106,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
             displayPopularGames(data.most_popular_games);
-            displayTopRatedGames(data.top_rated_games);
+            displayGames(data.top_rated_games, 'top-rated-games');
         })
         .catch(error => console.error('Error fetching game data:', error));
 
