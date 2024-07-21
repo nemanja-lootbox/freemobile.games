@@ -75,24 +75,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to display categories
     function displayCategories(categories) {
-        const categoryList = document.getElementById('category-list');
-        categoryList.innerHTML = '';
-        Object.entries(categories).forEach(([category, games]) => {
+        const categoryContainer = document.querySelector('.category-container');
+        categoryContainer.innerHTML = '';
+        categories.forEach(category => {
             const categoryElement = document.createElement('div');
             categoryElement.classList.add('category');
             categoryElement.innerHTML = `
-                <h3>${category}</h3>
-                <div class="category-games">
-                    ${games.map(game => `
-                        <div class="category-game">
-                            <img src="${game.icon_url}" alt="${game.title}" class="game-icon">
-                            <p>${game.title}</p>
-                            <p>Version: ${game.version}</p>
-                        </div>
+                <h3>${category.name}</h3>
+                <ul>
+                    ${category.games.map(game => `
+                        <li><img src="${game.image_url}" alt="${game.title}" class="game-icon"><a href="#">${game.title}</a></li>
                     `).join('')}
-                </div>
+                </ul>
+                <a href="#" class="view-more">View More</a>
             `;
-            categoryList.appendChild(categoryElement);
+            categoryContainer.appendChild(categoryElement);
         });
     }
 
@@ -108,9 +105,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 const allGames = [
-                    ...data.homepage.featured_games,
-                    ...data.homepage.latest_additions,
-                    ...data.homepage.top_rated_games
+                    ...data.featured_games,
+                    ...data.latest_games,
+                    ...data.top_rated_games
                 ];
                 
                 const searchResults = allGames.filter(game => 
@@ -121,9 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Clear existing content
                 document.getElementById('featured-games').innerHTML = '';
-                document.getElementById('latest-games').innerHTML = '';
-                document.getElementById('top-rated-games').innerHTML = '';
-                document.getElementById('category-list').innerHTML = '';
+                document.getElementById('latest-games-list').innerHTML = '';
+                document.getElementById('top-rated-games-list').innerHTML = '';
+                document.querySelector('.category-container').innerHTML = '';
                 
                 // Display search results
                 const searchResultsSection = document.getElementById('featured-games');
