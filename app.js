@@ -65,12 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.homepage.featured_games, 'featured-games', true);
-            displayGames(data.homepage.latest_additions, 'latest-games');
-            displayGames(data.homepage.top_rated_games, 'top-rated-games');
-            displayCategories(data.homepage.categories);
-            displayLatestGames(data.homepage.latest_additions);
-            displayPopularGames(data.homepage.top_rated_games);
+            displayGames(data.featured_games, 'featured-games', true);
+            displayGames(data.top_rated_games, 'top-rated-games');
+            displayCategories(data.categories);
+            displayLatestGames(data.latest_games);
+            displayPopularGames(data.top_rated_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
 
