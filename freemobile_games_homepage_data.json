@@ -5,7 +5,7 @@
             "title": "Clash of Clans",
             "description": "A strategy game where players build and expand their villages.",
             "category": "Strategy",
-            "image_url": "https://example.com/images/clash_of_clans.jpg",
+            "image_url": "/Users/nemanjadivjak/UnityProjects/freemobile.games/images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.supercell.clashofclans",
                 "iOS": "https://apps.apple.com/us/app/clash-of-clans/id529479190"
