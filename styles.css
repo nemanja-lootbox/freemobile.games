@@ -124,7 +124,18 @@ main {
 }
 
 .small-font li {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+}
+
+.small-font li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.small-font li a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
 }
 
 .section ul li a:hover {
