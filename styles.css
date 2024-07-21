@@ -189,12 +189,23 @@ h2 {
 
 .category li {
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.category .game-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .category a {
     color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
+    flex-grow: 1;
 }
 
 .category a:hover {
