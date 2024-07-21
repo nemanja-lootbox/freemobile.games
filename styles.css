@@ -176,48 +176,37 @@ h2 {
 /* Featured game grid styles */
 .featured-game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.featured-game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.featured-game-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.featured-game:hover {
+.featured-game-card:hover {
     transform: translateY(-10px);
 }
 
-.featured-game h3 {
+.featured-game-card h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     text-align: center;
     color: #4CAF50;
 }
 
-.featured-game img {
+.featured-game-image {
     width: 300px;
     height: 300px;
     object-fit: cover;
     border-radius: 5px;
-}
-
-.featured-game p {
-    margin-top: 1rem;
-    text-align: center;
-}
-
-.featured-game .download-links {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
 }
 
 /* Category styles */
