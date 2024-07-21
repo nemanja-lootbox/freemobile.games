@@ -22,6 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function displayTopRatedGames(games) {
+        const topRatedGamesList = document.getElementById('top-rated-games-list');
+        topRatedGamesList.innerHTML = ''; // Clear existing content
+        games.forEach(game => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
+            topRatedGamesList.appendChild(li);
+        });
+    }
+
     function displayLatestGames(games) {
         const latestGamesList = document.getElementById('latest-games-list');
         latestGamesList.innerHTML = ''; // Clear existing content
@@ -72,10 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             displayGames(data.featured_games, 'featured_games', true);
-            displayGames(data.top_rated_games, 'top-rated-games');
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
             displayPopularGames(data.top_rated_games);
+            displayTopRatedGames(data.top_rated_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
 
