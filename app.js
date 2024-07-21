@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayGames(data.featured_games, 'featured-games', true);
             displayGames(data.top_rated_games, 'top-rated-games');
             displayCategories(data.categories);
-            displayPopularGames(data.top_rated_games);
+            displayPopularGames(data.most_popular_games);
             displayLatestGames(data.latest_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayPopularGames(games) {
         const popularGamesList = document.getElementById('popular-games-list');
         popularGamesList.innerHTML = ''; // Clear existing content
-        games.slice(0, 10).forEach((game, index) => {
+        games.forEach((game, index) => {
             const li = document.createElement('li');
             li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
             popularGamesList.appendChild(li);
