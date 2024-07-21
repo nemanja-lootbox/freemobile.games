@@ -1,0 +1,76 @@
+{
+    "homepage": {
+        "featured_games": [
+            {
+                "id": 1,
+                "title": "Clash of Clans",
+                "description": "A strategy game where players build and expand their villages.",
+                "category": "Strategy",
+                "image_url": "https://example.com/images/clash_of_clans.jpg",
+                "download_links": {
+                    "Android": "https://play.google.com/store/apps/details?id=com.supercell.clashofclans",
+                    "iOS": "https://apps.apple.com/us/app/clash-of-clans/id529479190"
+                }
+            },
+            {
+                "id": 2,
+                "title": "Candy Crush Saga",
+                "description": "A popular puzzle game with sweet challenges.",
+                "category": "Puzzle",
+                "image_url": "https://example.com/images/candy_crush_saga.jpg",
+                "download_links": {
+                    "Android": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga",
+                    "iOS": "https://apps.apple.com/us/app/candy-crush-saga/id553834731"
+                }
+            }
+        ],
+        "latest_additions": [
+            {
+                "id": 3,
+                "title": "PUBG Mobile",
+                "description": "A battle royale game where players fight to be the last one standing.",
+                "category": "Action",
+                "image_url": "https://example.com/images/pubg_mobile.jpg",
+                "download_links": {
+                    "Android": "https://play.google.com/store/apps/details?id=com.tencent.ig",
+                    "iOS": "https://apps.apple.com/us/app/pubg-mobile/id1330123889"
+                }
+            },
+            {
+                "id": 4,
+                "title": "Among Us",
+                "description": "A multiplayer game of teamwork and betrayal.",
+                "category": "Adventure",
+                "image_url": "https://example.com/images/among_us.jpg",
+                "download_links": {
+                    "Android": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia",
+                    "iOS": "https://apps.apple.com/us/app/among-us/id1351168404"
+                }
+            }
+        ],
+        "top_rated_games": [
+            {
+                "id": 5,
+                "title": "Minecraft",
+                "description": "A sandbox game where players can build and explore their own worlds.",
+                "category": "Adventure",
+                "image_url": "https://example.com/images/minecraft.jpg",
+                "download_links": {
+                    "Android": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
+                    "iOS": "https://apps.apple.com/us/app/minecraft/id479516143"
+                }
+            },
+            {
+                "id": 6,
+                "title": "Genshin Impact",
+                "description": "An open-world action RPG with stunning visuals and gameplay.",
+                "category": "RPG",
+                "image_url": "https://example.com/images/genshin_impact.jpg",
+                "download_links": {
+                    "Android": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact",
+                    "iOS": "https://apps.apple.com/us/app/genshin-impact/id1517783697"
+                }
+            }
+        ]
+    }
+}
