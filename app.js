@@ -73,7 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const section = document.getElementById(sectionId);
         section.innerHTML = '';
         games.forEach(game => {
-            section.appendChild(createGameElement(game, isFeatured));
+            const gameElement = document.createElement('div');
+            gameElement.classList.add(isFeatured ? 'featured-game-card' : 'game');
+            gameElement.innerHTML = `
+                <h3>${game.title}</h3>
+                <img src="${game.image_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
+                ${isFeatured ? `<p>${game.description}</p>` : ''}
+            `;
+            section.appendChild(gameElement);
         });
     }
 
@@ -95,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayFeaturedGames(data.featured_games);
+            displayGames(data.featured_games, 'featured-games', true);
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
             displayPopularGames(data.most_popular_games);
