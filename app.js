@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayPopularGames(games) {
         const popularGamesList = document.getElementById('popular-games-list');
+        popularGamesList.innerHTML = ''; // Clear existing content
         games.slice(0, 10).forEach((game, index) => {
             const li = document.createElement('li');
             li.innerHTML = `<a href="#">${index + 1}. ${game.title}</a>`;
