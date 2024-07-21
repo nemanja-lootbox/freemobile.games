@@ -154,6 +154,14 @@ main {
     color: #0078D4;
 }
 
+.small-font .game-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
 .section ul li a:hover {
     color: #005BB5;
 }
