@@ -396,22 +396,22 @@
                 {
                     "id": 39,
                     "title": "Two Dots",
-                    "image_url": "https://example.com/images/two_dots.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 40,
                     "title": "Cut the Rope",
-                    "image_url": "https://example.com/images/cut_the_rope.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 41,
                     "title": "Flow Free",
-                    "image_url": "https://example.com/images/flow_free.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 42,
                     "title": "Unblock Me",
-                    "image_url": "https://example.com/images/unblock_me.jpg"
+                    "image_url": "images/gameicon.png"
                 }
             ]
         },
@@ -421,22 +421,22 @@
                 {
                     "id": 43,
                     "title": "The Sims Mobile",
-                    "image_url": "https://example.com/images/the_sims_mobile.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 44,
                     "title": "Stardew Valley",
-                    "image_url": "https://example.com/images/stardew_valley.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 45,
                     "title": "Game Dev Tycoon",
-                    "image_url": "https://example.com/images/game_dev_tycoon.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 46,
                     "title": "RollerCoaster Tycoon Touch",
-                    "image_url": "https://example.com/images/rollercoaster_tycoon_touch.jpg"
+                    "image_url": "images/gameicon.png"
                 }
             ]
         },
@@ -446,22 +446,22 @@
                 {
                     "id": 47,
                     "title": "Plague Inc.",
-                    "image_url": "https://example.com/images/plague_inc.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 48,
                     "title": "Bloons TD 6",
-                    "image_url": "https://example.com/images/bloons_td_6.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 49,
                     "title": "Clash of Clans",
-                    "image_url": "https://example.com/images/clash_of_clans.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 50,
                     "title": "Kingdom Rush",
-                    "image_url": "https://example.com/images/kingdom_rush.jpg"
+                    "image_url": "images/gameicon.png"
                 }
             ]
         }
