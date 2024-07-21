@@ -105,7 +105,7 @@
             "title": "Pokémon GO",
             "description": "An augmented reality game where players catch Pokémon in the real world.",
             "category": "Adventure",
-            "image_url": "https://example.com/images/pokemon_go.jpg",
+            "image_url": "images/gameicon.png",
             "date": "17 Jul '23"
         },
         {
@@ -113,7 +113,7 @@
             "title": "Roblox",
             "description": "A platform where users can play and create various games.",
             "category": "Sandbox",
-            "image_url": "https://example.com/images/roblox.jpg",
+            "image_url": "images/gameicon.png",
             "date": "16 Jul '23"
         },
         {
@@ -121,7 +121,7 @@
             "title": "Hay Day",
             "description": "A farming simulation game with social features.",
             "category": "Simulation",
-            "image_url": "https://example.com/images/hay_day.jpg",
+            "image_url": "images/gameicon.png",
             "date": "15 Jul '23"
         },
         {
@@ -129,7 +129,7 @@
             "title": "8 Ball Pool",
             "description": "A multiplayer pool game with realistic physics.",
             "category": "Sports",
-            "image_url": "https://example.com/images/8_ball_pool.jpg",
+            "image_url": "images/gameicon.png",
             "date": "14 Jul '23"
         },
         {
@@ -137,7 +137,7 @@
             "title": "Asphalt 9: Legends",
             "description": "A high-octane racing game with stunning graphics.",
             "category": "Racing",
-            "image_url": "https://example.com/images/asphalt_9.jpg",
+            "image_url": "images/gameicon.png",
             "date": "13 Jul '23"
         },
         {
@@ -145,7 +145,7 @@
             "title": "Homescapes",
             "description": "A match-3 puzzle game with a home renovation theme.",
             "category": "Puzzle",
-            "image_url": "https://example.com/images/homescapes.jpg",
+            "image_url": "images/gameicon.png",
             "date": "12 Jul '23"
         }
     ],
@@ -155,7 +155,7 @@
             "title": "Angry Birds 2",
             "description": "The sequel to the popular physics-based puzzle game.",
             "category": "Puzzle",
-            "image_url": "https://example.com/images/angry_birds_2.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.5
         },
         {
@@ -163,7 +163,7 @@
             "title": "Fruit Ninja",
             "description": "A fruit-slicing arcade game with simple yet addictive gameplay.",
             "category": "Arcade",
-            "image_url": "https://example.com/images/fruit_ninja.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.3
         },
         {
@@ -171,7 +171,7 @@
             "title": "Temple Run 2",
             "description": "An endless runner game set in a mystical temple environment.",
             "category": "Adventure",
-            "image_url": "https://example.com/images/temple_run_2.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.4
         },
         {
@@ -179,7 +179,7 @@
             "title": "Crossy Road",
             "description": "A retro-style arcade game where players guide characters across busy roads.",
             "category": "Arcade",
-            "image_url": "https://example.com/images/crossy_road.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.5
         },
         {
@@ -187,7 +187,7 @@
             "title": "Plants vs. Zombies 2",
             "description": "A tower defense game where players use plants to fend off zombies.",
             "category": "Strategy",
-            "image_url": "https://example.com/images/plants_vs_zombies_2.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.4
         },
         {
@@ -195,7 +195,7 @@
             "title": "Hill Climb Racing",
             "description": "A physics-based racing game with various vehicles and terrains.",
             "category": "Racing",
-            "image_url": "https://example.com/images/hill_climb_racing.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.3
         },
         {
@@ -203,7 +203,7 @@
             "title": "Geometry Dash",
             "description": "A rhythm-based action platformer with challenging levels.",
             "category": "Arcade",
-            "image_url": "https://example.com/images/geometry_dash.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.7
         },
         {
@@ -211,7 +211,7 @@
             "title": "Wordscapes",
             "description": "A word puzzle game that combines crosswords and anagrams.",
             "category": "Word",
-            "image_url": "https://example.com/images/wordscapes.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.6
         },
         {
@@ -219,7 +219,7 @@
             "title": "Clash Royale",
             "description": "A real-time strategy game with collectible cards and tower defense elements.",
             "category": "Strategy",
-            "image_url": "https://example.com/images/clash_royale.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.2
         },
         {
@@ -227,7 +227,7 @@
             "title": "Helix Jump",
             "description": "A simple yet challenging arcade game where players guide a ball down a spiral tower.",
             "category": "Arcade",
-            "image_url": "https://example.com/images/helix_jump.jpg",
+            "image_url": "images/gameicon.png",
             "rating": 4.3
         }
     ],
@@ -238,22 +238,22 @@
                 {
                     "id": 27,
                     "title": "Shadow Fight 3",
-                    "image_url": "https://example.com/images/shadow_fight_3.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 28,
                     "title": "Gangstar Vegas",
-                    "image_url": "https://example.com/images/gangstar_vegas.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 29,
                     "title": "Critical Ops",
-                    "image_url": "https://example.com/images/critical_ops.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 30,
                     "title": "Into the Dead 2",
-                    "image_url": "https://example.com/images/into_the_dead_2.jpg"
+                    "image_url": "images/gameicon.png"
                 }
             ]
         },
