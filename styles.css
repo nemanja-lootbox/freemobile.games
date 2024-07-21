@@ -87,6 +87,57 @@ main {
     margin: 0 auto;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.section {
+    width: 48%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 1.2em;
+    border-bottom: 2px solid #d0d0d0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+}
+
+.section ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.section ul li a:hover {
+    text-decoration: underline;
+}
+
+.more-link {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
 section {
     margin-bottom: 2rem;
     background-color: white;
