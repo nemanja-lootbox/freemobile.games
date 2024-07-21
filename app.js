@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         popularGamesList.innerHTML = ''; // Clear existing content
         games.forEach((game, index) => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
+            li.innerHTML = `<a href="#">${index + 1}. <img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
             popularGamesList.appendChild(li);
         });
     }
