@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         latestGamesList.innerHTML = ''; // Clear existing content
         games.forEach(game => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
+            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a> <span class="game-date">${game.date}</span>`;
             latestGamesList.appendChild(li);
         });
     }
@@ -81,10 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.featured_games, 'featured_games', true);
+            displayGames(data.featured_games, 'featured-games', true);
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
-            displayPopularGames(data.top_rated_games);
+            displayPopularGames(data.most_popular_games);
             displayTopRatedGames(data.top_rated_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
