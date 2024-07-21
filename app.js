@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.homepage.featured_games, 'featured-games');
-            displayGames(data.homepage.top_rated_games, 'top-rated-games');
-            displayCategories(data.homepage.categories);
-            displayPopularGames(data.homepage.top_rated_games);
+            displayGames(data.featured_games, 'featured-games', true);
+            displayGames(data.top_rated_games, 'top-rated-games');
+            displayCategories(data.categories);
+            displayPopularGames(data.top_rated_games);
+            displayLatestGames(data.latest_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
 
@@ -18,6 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const li = document.createElement('li');
             li.innerHTML = `<a href="#">${index + 1}. ${game.title}</a>`;
             popularGamesList.appendChild(li);
+        });
+    }
+
+    function displayLatestGames(games) {
+        const latestGamesList = document.getElementById('latest-games-list');
+        latestGamesList.innerHTML = ''; // Clear existing content
+        games.forEach(game => {
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#">${game.date} - <img src="${game.image_url}" alt="" class="game-icon"> ${game.title}</a>`;
+            latestGamesList.appendChild(li);
         });
     }
 
