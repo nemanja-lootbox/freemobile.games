@@ -77,11 +77,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function displayFeaturedGames(games) {
+        const featuredGamesContainer = document.getElementById('featured-games');
+        featuredGamesContainer.innerHTML = '';
+        games.forEach(game => {
+            const gameCard = document.createElement('div');
+            gameCard.classList.add('featured-game-card');
+            gameCard.innerHTML = `
+                <h3>${game.title}</h3>
+                <img src="${game.image_url}" alt="${game.title}" class="featured-game-image">
+            `;
+            featuredGamesContainer.appendChild(gameCard);
+        });
+    }
+
     // Update the function calls in the fetch callback
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.featured_games, 'featured-games', true);
+            displayFeaturedGames(data.featured_games);
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
             displayPopularGames(data.most_popular_games);
