@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.featured_games, 'featured-games', true);
+            console.log('Latest Games Titles:', data.latest_games.map(game => game.title));
+            displayGames(data.featured_games, 'featured_games', true);
             displayGames(data.top_rated_games, 'top-rated-games');
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.featured_games, 'featured-games', true);
+            displayGames(data.featured_games, 'featured_games', true);
             displayGames(data.top_rated_games, 'top-rated-games');
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
@@ -129,15 +130,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 );
                 
                 // Clear existing content
-                document.getElementById('featured-games').innerHTML = '';
+                document.getElementById('featured_games').innerHTML = '';
                 document.getElementById('latest-games-list').innerHTML = '';
                 document.getElementById('top-rated-games-list').innerHTML = '';
                 document.querySelector('.category-container').innerHTML = '';
                 
                 // Display search results
-                const searchResultsSection = document.getElementById('featured-games');
+                const searchResultsSection = document.getElementById('featured_games');
                 searchResultsSection.innerHTML = '<h2>Search Results</h2>';
-                displayGames(searchResults, 'featured-games');
+                displayGames(searchResults, 'featured_games');
             })
             .catch(error => console.error('Error fetching game data:', error));
     });
