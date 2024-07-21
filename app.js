@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayGames(data.featured_games, 'featured-games', true);
             displayGames(data.top_rated_games, 'top-rated-games');
             displayCategories(data.categories);
-            displayPopularGames(data.most_popular_games);
+            displayPopularGames(data.top_rated_games);
             displayLatestGames(data.latest_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
