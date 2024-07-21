@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         latestGamesList.innerHTML = ''; // Clear existing content
         games.forEach(game => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="#">${game.date} - <img src="${game.image_url}" alt="" class="game-icon"> ${game.title}</a>`;
+            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title} - ${game.date}</a>`;
             latestGamesList.appendChild(li);
         });
     }
