@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         popularGamesList.innerHTML = ''; // Clear existing content
         games.slice(0, 10).forEach((game, index) => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="#">${index + 1}. ${game.title}</a>`;
+            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
             popularGamesList.appendChild(li);
         });
     }
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         latestGamesList.innerHTML = ''; // Clear existing content
         games.forEach(game => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title} - ${game.date}</a>`;
+            li.innerHTML = `<a href="#"><img src="${game.image_url}" alt="${game.title}" class="game-icon"> ${game.title}</a>`;
             latestGamesList.appendChild(li);
         });
     }
@@ -50,17 +50,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const gameElement = document.createElement('div');
         gameElement.classList.add(isFeatured ? 'featured-game' : 'game');
         gameElement.innerHTML = `
-            <h3>${game.title}</h3>
-            <img src="${game.image_url || game.icon_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
-            <p>${game.description || ''}</p>
-            ${!isFeatured ? `
-                <p>Category: ${game.category}</p>
-                <p>Version: ${game.version}</p>
-            ` : ''}
-            <div class="download-links">
-                ${game.download_links?.Android ? `<a href="${game.download_links.Android}" target="_blank">Android</a>` : ''}
-                ${game.download_links?.iOS ? `<a href="${game.download_links.iOS}" target="_blank">iOS</a>` : ''}
-            </div>
+            <a href="#" class="game-link">
+                <img src="${game.image_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
+                <h3>${game.title}</h3>
+            </a>
         `;
         return gameElement;
     }
