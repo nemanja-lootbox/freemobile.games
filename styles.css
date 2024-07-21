@@ -367,8 +367,29 @@ h2 {
 footer {
     background-color: #F1F1F1;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     color: #333333;
+    border-top: 1px solid #E0E0E0;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer nav a {
+    color: #0078D4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: #005BB5;
 }
 
 /* Responsive design */
