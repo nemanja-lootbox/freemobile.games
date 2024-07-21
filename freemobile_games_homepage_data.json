@@ -5,7 +5,7 @@
             "title": "Clash of Clans",
             "description": "A strategy game where players build and expand their villages.",
             "category": "Strategy",
-            "image_url": "/Users/nemanjadivjak/UnityProjects/freemobile.games/images/gameicon.png",
+            "image_url": "images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.supercell.clashofclans",
                 "iOS": "https://apps.apple.com/us/app/clash-of-clans/id529479190"
@@ -16,7 +16,7 @@
             "title": "Candy Crush Saga",
             "description": "A popular puzzle game with sweet challenges.",
             "category": "Puzzle",
-            "image_url": "https://example.com/images/candy_crush_saga.jpg",
+            "image_url": "images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga",
                 "iOS": "https://apps.apple.com/us/app/candy-crush-saga/id553834731"
@@ -27,7 +27,7 @@
             "title": "PUBG Mobile",
             "description": "A battle royale game where players fight to be the last one standing.",
             "category": "Action",
-            "image_url": "https://example.com/images/pubg_mobile.jpg",
+            "image_url": "images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.tencent.ig",
                 "iOS": "https://apps.apple.com/us/app/pubg-mobile/id1330123889"
@@ -38,7 +38,7 @@
             "title": "Among Us",
             "description": "A multiplayer game of teamwork and betrayal.",
             "category": "Adventure",
-            "image_url": "https://example.com/images/among_us.jpg",
+            "image_url": "images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia",
                 "iOS": "https://apps.apple.com/us/app/among-us/id1351168404"
@@ -49,7 +49,7 @@
             "title": "Minecraft",
             "description": "A sandbox game where players can build and explore their own worlds.",
             "category": "Adventure",
-            "image_url": "https://example.com/images/minecraft.jpg",
+            "image_url": "images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
                 "iOS": "https://apps.apple.com/us/app/minecraft/id479516143"
@@ -60,7 +60,7 @@
             "title": "Genshin Impact",
             "description": "An open-world action RPG with stunning visuals and gameplay.",
             "category": "RPG",
-            "image_url": "https://example.com/images/genshin_impact.jpg",
+            "image_url": "images/gameicon.png",
             "download_links": {
                 "Android": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact",
                 "iOS": "https://apps.apple.com/us/app/genshin-impact/id1517783697"
@@ -73,7 +73,7 @@
             "title": "Brawl Stars",
             "description": "A fast-paced multiplayer battle arena game.",
             "category": "Action",
-            "image_url": "https://example.com/images/brawl_stars.jpg",
+            "image_url": "images/gameicon.png",
             "date": "21 Jul '23"
         },
         {
@@ -81,7 +81,7 @@
             "title": "Subway Surfers",
             "description": "An endless runner game set in a vibrant, urban world.",
             "category": "Arcade",
-            "image_url": "https://example.com/images/subway_surfers.jpg",
+            "image_url": "images/gameicon.png",
             "date": "20 Jul '23"
         },
         {
@@ -89,7 +89,7 @@
             "title": "Gardenscapes",
             "description": "A match-3 puzzle game with a garden renovation theme.",
             "category": "Puzzle",
-            "image_url": "https://example.com/images/gardenscapes.jpg",
+            "image_url": "images/gameicon.png",
             "date": "19 Jul '23"
         },
         {
@@ -97,7 +97,7 @@
             "title": "Call of Duty: Mobile",
             "description": "A first-person shooter game with multiple game modes.",
             "category": "Action",
-            "image_url": "https://example.com/images/cod_mobile.jpg",
+            "image_url": "images/gameicon.png",
             "date": "18 Jul '23"
         },
         {
