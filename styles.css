@@ -29,7 +29,7 @@ header {
 .logo h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: #0078D4;
+    color: red;
 }
 
 #search-form {
