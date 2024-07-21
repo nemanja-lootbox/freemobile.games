@@ -4,23 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             displayGames(data.homepage.featured_games, 'featured-games');
-            displayGames(data.homepage.latest_additions, 'latest-games');
             displayGames(data.homepage.top_rated_games, 'top-rated-games');
             displayCategories(data.homepage.categories);
-            displayLatestGames(data.homepage.latest_additions);
             displayPopularGames(data.homepage.top_rated_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
 
-    function displayLatestGames(games) {
-        const latestGamesList = document.getElementById('latest-games-list');
-        games.slice(0, 10).forEach((game, index) => {
-            const li = document.createElement('li');
-            const date = new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: '2-digit' });
-            li.innerHTML = `<a href="#">${date} - ${game.title}</a>`;
-            latestGamesList.appendChild(li);
-        });
-    }
 
     function displayPopularGames(games) {
         const popularGamesList = document.getElementById('popular-games-list');
