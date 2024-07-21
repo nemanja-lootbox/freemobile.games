@@ -94,3 +94,45 @@ footer {
         flex-direction: column;
     }
 }
+
+/* Game element styles */
+.game {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.game-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.game h3 {
+    margin-bottom: 0.5rem;
+}
+
+.game p {
+    margin-bottom: 0.5rem;
+}
+
+.download-links {
+    margin-top: 0.5rem;
+}
+
+.download-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+}
+
+.download-links a:hover {
+    background-color: #45a049;
+}
