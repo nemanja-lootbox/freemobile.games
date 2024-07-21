@@ -362,6 +362,36 @@ h2 {
     background-color: #005BB5;
 }
 
+#top-rated-games {
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+#top-rated-games .game-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#top-rated-games .game-card {
+    width: 15%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#top-rated-games .game-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#top-rated-games .game-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
 /* Footer styles */
 footer {
     background-color: #F1F1F1;
