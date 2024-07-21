@@ -33,15 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to create a game element
-    function createGameElement(game) {
+    function createGameElement(game, isFeatured = false) {
         const gameElement = document.createElement('div');
-        gameElement.classList.add('game');
+        gameElement.classList.add(isFeatured ? 'featured-game' : 'game');
         gameElement.innerHTML = `
-            <img src="${game.icon_url}" alt="${game.title}" class="game-icon">
             <h3>${game.title}</h3>
+            <img src="${game.image_url || game.icon_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
             <p>${game.description || ''}</p>
-            <p>Category: ${game.category}</p>
-            <p>Version: ${game.version}</p>
+            ${!isFeatured ? `
+                <p>Category: ${game.category}</p>
+                <p>Version: ${game.version}</p>
+            ` : ''}
             <div class="download-links">
                 ${game.download_links?.Android ? `<a href="${game.download_links.Android}" target="_blank">Android</a>` : ''}
                 ${game.download_links?.iOS ? `<a href="${game.download_links.iOS}" target="_blank">iOS</a>` : ''}
@@ -51,13 +53,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to display games in a section
-    function displayGames(games, sectionId) {
+    function displayGames(games, sectionId, isFeatured = false) {
         const section = document.getElementById(sectionId);
         section.innerHTML = '';
         games.forEach(game => {
-            section.appendChild(createGameElement(game));
+            section.appendChild(createGameElement(game, isFeatured));
         });
     }
+
+    // Update the function calls in the fetch callback
+    fetch('freemobile_games_homepage_data.json')
+        .then(response => response.json())
+        .then(data => {
+            displayGames(data.homepage.featured_games, 'featured-games', true);
+            displayGames(data.homepage.latest_additions, 'latest-games');
+            displayGames(data.homepage.top_rated_games, 'top-rated-games');
+            displayCategories(data.homepage.categories);
+            displayLatestGames(data.homepage.latest_additions);
+            displayPopularGames(data.homepage.top_rated_games);
+        })
+        .catch(error => console.error('Error fetching game data:', error));
 
     // Function to display categories
     function displayCategories(categories) {
