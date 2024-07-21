@@ -115,12 +115,16 @@ main {
 }
 
 .section ul li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .section ul li a {
     text-decoration: none;
     color: #007BFF;
+}
+
+.small-font li {
+    font-size: 0.9em;
 }
 
 .section ul li a:hover {

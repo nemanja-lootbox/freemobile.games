@@ -7,27 +7,27 @@ document.addEventListener('DOMContentLoaded', function() {
             displayGames(data.homepage.latest_additions, 'latest-games');
             displayGames(data.homepage.top_rated_games, 'top-rated-games');
             displayCategories(data.homepage.categories);
-            displayLatestReleases(data.homepage.latest_additions);
-            displayPopularDownloads(data.homepage.top_rated_games);
+            displayLatestGames(data.homepage.latest_additions);
+            displayPopularGames(data.homepage.top_rated_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
 
-    function displayLatestReleases(games) {
-        const latestReleasesList = document.getElementById('latest-releases-list');
+    function displayLatestGames(games) {
+        const latestGamesList = document.getElementById('latest-games-list');
         games.slice(0, 10).forEach((game, index) => {
             const li = document.createElement('li');
             const date = new Date().toLocaleDateString('en-US', { day: '2-digit', month: 'short', year: '2-digit' });
             li.innerHTML = `<a href="#">${date} - ${game.title}</a>`;
-            latestReleasesList.appendChild(li);
+            latestGamesList.appendChild(li);
         });
     }
 
-    function displayPopularDownloads(games) {
-        const popularDownloadsList = document.getElementById('popular-downloads-list');
+    function displayPopularGames(games) {
+        const popularGamesList = document.getElementById('popular-games-list');
         games.slice(0, 10).forEach((game, index) => {
             const li = document.createElement('li');
             li.innerHTML = `<a href="#">${index + 1}. ${game.title}</a>`;
-            popularDownloadsList.appendChild(li);
+            popularGamesList.appendChild(li);
         });
     }
 
