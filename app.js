@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayFeaturedGames(data.featured_games);
             displayCategories(data.categories);
             displayLatestGames(data.latest_games);
-            displayPopularGames(data.most_popular_games);
+            displayPopularGames(data.top_rated_games);
             displayTopRatedGames(data.top_rated_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
