@@ -71,29 +71,13 @@ header {
 
 nav {
     background-color: #F1F1F1;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333333;
+.nav-message {
+    text-align: center;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
     color: #0078D4;
 }
 
