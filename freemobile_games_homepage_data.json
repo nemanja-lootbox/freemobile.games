@@ -2,7 +2,7 @@
     "featured_games": [
         {
             "id": 1,
-            "title": "Clash of Clans",
+            "title": "featured game 1",
             "description": "A strategy game where players build and expand their villages.",
             "category": "Strategy",
             "image_url": "images/gameicon.png",
@@ -70,7 +70,90 @@
     "latest_games": [
         {
             "id": 7,
-            "title": "Brawl Stars",
+            "title": "latest games 1",
+            "description": "A fast-paced multiplayer battle arena game.",
+            "category": "Action",
+            "image_url": "images/gameicon.png",
+            "date": "21 Jul '23"
+        },
+        {
+            "id": 8,
+            "title": "Subway Surfers",
+            "description": "An endless runner game set in a vibrant, urban world.",
+            "category": "Arcade",
+            "image_url": "images/gameicon.png",
+            "date": "20 Jul '23"
+        },
+        {
+            "id": 9,
+            "title": "Gardenscapes",
+            "description": "A match-3 puzzle game with a garden renovation theme.",
+            "category": "Puzzle",
+            "image_url": "images/gameicon.png",
+            "date": "19 Jul '23"
+        },
+        {
+            "id": 10,
+            "title": "Call of Duty: Mobile",
+            "description": "A first-person shooter game with multiple game modes.",
+            "category": "Action",
+            "image_url": "images/gameicon.png",
+            "date": "18 Jul '23"
+        },
+        {
+            "id": 11,
+            "title": "Pokémon GO",
+            "description": "An augmented reality game where players catch Pokémon in the real world.",
+            "category": "Adventure",
+            "image_url": "images/gameicon.png",
+            "date": "17 Jul '23"
+        },
+        {
+            "id": 12,
+            "title": "Roblox",
+            "description": "A platform where users can play and create various games.",
+            "category": "Sandbox",
+            "image_url": "images/gameicon.png",
+            "date": "16 Jul '23"
+        },
+        {
+            "id": 13,
+            "title": "Hay Day",
+            "description": "A farming simulation game with social features.",
+            "category": "Simulation",
+            "image_url": "images/gameicon.png",
+            "date": "15 Jul '23"
+        },
+        {
+            "id": 14,
+            "title": "8 Ball Pool",
+            "description": "A multiplayer pool game with realistic physics.",
+            "category": "Sports",
+            "image_url": "images/gameicon.png",
+            "date": "14 Jul '23"
+        },
+        {
+            "id": 15,
+            "title": "Asphalt 9: Legends",
+            "description": "A high-octane racing game with stunning graphics.",
+            "category": "Racing",
+            "image_url": "images/gameicon.png",
+            "date": "13 Jul '23"
+        },
+        {
+            "id": 16,
+            "title": "Homescapes",
+            "description": "A match-3 puzzle game with a home renovation theme.",
+            "category": "Puzzle",
+            "image_url": "images/gameicon.png",
+            "date": "12 Jul '23"
+        }
+    ],
+
+    "most_popular_games": [
+        {
+            "id": 7,
+            "title": "most popular game 1",
             "description": "A fast-paced multiplayer battle arena game.",
             "category": "Action",
             "image_url": "images/gameicon.png",
@@ -152,7 +235,7 @@
     "top_rated_games": [
         {
             "id": 17,
-            "title": "Angry Birds 2",
+            "title": "top rated games",
             "description": "The sequel to the popular physics-based puzzle game.",
             "category": "Puzzle",
             "image_url": "images/gameicon.png",

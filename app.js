@@ -3,18 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('freemobile_games_homepage_data.json')
         .then(response => response.json())
         .then(data => {
-            displayGames(data.featured_games, 'featured-games', true);
-            displayGames(data.top_rated_games, 'top-rated-games');
+            displayFeaturedGames(data.featured_games);
             displayCategories(data.categories);
+            displayLatestGames(data.latest_games);
             displayPopularGames(data.most_popular_games);
             displayTopRatedGames(data.top_rated_games);
-            displayLatestGames(data.latest_games);
         })
         .catch(error => console.error('Error fetching game data:', error));
 
-
     function displayPopularGames(games) {
-        const popularGamesList = document.getElementById('popular-games-list');
+        const popularGamesList = document.getElementById('most-popular-games-list');
         popularGamesList.innerHTML = ''; // Clear existing content
         games.forEach((game, index) => {
             const li = document.createElement('li');
@@ -43,41 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Call displayLatestGames in the fetch callback
-    fetch('freemobile_games_homepage_data.json')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Latest Games Titles:', data.latest_games.map(game => game.title));
-            displayGames(data.featured_games, 'featured_games', true);
-            displayGames(data.top_rated_games, 'top-rated-games');
-            displayCategories(data.categories);
-            displayLatestGames(data.latest_games);
-            displayPopularGames(data.top_rated_games);
-        })
-        .catch(error => console.error('Error fetching game data:', error));
-
-    // Function to create a game element
-    function createGameElement(game, isFeatured = false) {
-        const gameElement = document.createElement('div');
-        gameElement.classList.add(isFeatured ? 'featured-game' : 'game');
-        gameElement.innerHTML = `
-            <a href="#" class="game-link">
-                <img src="${game.image_url}" alt="${game.title}" class="${isFeatured ? 'featured-game-image' : 'game-icon'}">
-                <h3>${game.title}</h3>
-            </a>
-        `;
-        return gameElement;
-    }
-
-    // Function to display games in a section
-    function displayGames(games, sectionId, isFeatured = false) {
-        const section = document.getElementById(sectionId);
-        section.innerHTML = '';
-        games.forEach(game => {
-            section.appendChild(createGameElement(game, isFeatured));
-        });
-    }
-
     function displayFeaturedGames(games) {
         const featuredGamesContainer = document.getElementById('featured-games');
         featuredGamesContainer.innerHTML = '';
@@ -91,18 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
             featuredGamesContainer.appendChild(gameCard);
         });
     }
-
-    // Update the function calls in the fetch callback
-    fetch('freemobile_games_homepage_data.json')
-        .then(response => response.json())
-        .then(data => {
-            displayFeaturedGames(data.featured_games);
-            displayCategories(data.categories);
-            displayLatestGames(data.latest_games);
-            displayPopularGames(data.top_rated_games);
-            displayTopRatedGames(data.top_rated_games);
-        })
-        .catch(error => console.error('Error fetching game data:', error));
 
     // Function to display categories
     function displayCategories(categories) {
@@ -138,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const allGames = [
                     ...data.featured_games,
                     ...data.latest_games,
+                    ...data.most_popular_games,
                     ...data.top_rated_games
                 ];
                 
@@ -151,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('featured_games').innerHTML = '';
                 document.getElementById('latest-games-list').innerHTML = '';
                 document.getElementById('top-rated-games-list').innerHTML = '';
+                document.getElementById('most-popular-games-list').innerHTML = '';
                 document.querySelector('.category-container').innerHTML = '';
                 
                 // Display search results
