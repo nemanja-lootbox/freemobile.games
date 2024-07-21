@@ -32,6 +32,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Call displayLatestGames in the fetch callback
+    fetch('freemobile_games_homepage_data.json')
+        .then(response => response.json())
+        .then(data => {
+            displayGames(data.featured_games, 'featured-games', true);
+            displayGames(data.top_rated_games, 'top-rated-games');
+            displayCategories(data.categories);
+            displayLatestGames(data.latest_games);
+            displayPopularGames(data.top_rated_games);
+        })
+        .catch(error => console.error('Error fetching game data:', error));
+
     // Function to create a game element
     function createGameElement(game, isFeatured = false) {
         const gameElement = document.createElement('div');
