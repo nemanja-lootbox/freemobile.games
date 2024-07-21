@@ -346,22 +346,22 @@
                 {
                     "id": 31,
                     "title": "Lara Croft GO",
-                    "image_url": "https://example.com/images/lara_croft_go.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 32,
                     "title": "Monument Valley",
-                    "image_url": "https://example.com/images/monument_valley.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 33,
                     "title": "Oceanhorn",
-                    "image_url": "https://example.com/images/oceanhorn.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 34,
                     "title": "Sky: Children of the Light",
-                    "image_url": "https://example.com/images/sky_children_of_the_light.jpg"
+                    "image_url": "images/gameicon.png"
                 }
             ]
         },
@@ -371,22 +371,22 @@
                 {
                     "id": 35,
                     "title": "Jetpack Joyride",
-                    "image_url": "https://example.com/images/jetpack_joyride.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 36,
                     "title": "Doodle Jump",
-                    "image_url": "https://example.com/images/doodle_jump.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 37,
                     "title": "Subway Surfers",
-                    "image_url": "https://example.com/images/subway_surfers.jpg"
+                    "image_url": "images/gameicon.png"
                 },
                 {
                     "id": 38,
                     "title": "Smash Hit",
-                    "image_url": "https://example.com/images/smash_hit.jpg"
+                    "image_url": "images/gameicon.png"
                 }
             ]
         },
